@@ -1,6 +1,7 @@
 #include<stdio.h>
-//This is swep function.
-void swep(int *a,int *b)
+/*The code owner Md.Showkatul islam--1/26-2021*/
+//This is swap function.
+void swap(int *a,int *b)
 {
     int temp;
     temp=*a;
@@ -80,7 +81,7 @@ void Bubblesort(int a[],int n)
         for(j=0;j<n-1-i;j++)
         {
             if(a[j]>a[j+1])
-                swep(&a[j],&a[j+1]);
+                swap(&a[j],&a[j+1]);
         }
     }
 }
@@ -96,7 +97,7 @@ void Selectionsort(int a[],int n)
             if(a[j]<a[min])
                 min=j;
         }
-        swep(&a[i],&a[min]);
+        swap(&a[i],&a[min]);
     }
 }
 //This is insertion sort time complexity O(n^2).
@@ -131,9 +132,9 @@ int partition(int a[],int l,int h)
             j--;
         }while(a[j]>pivot);
         if(i<j)
-        swep(&a[i],&a[j]);
+        swap(&a[i],&a[j]);
     }
-    swep(&a[l],&a[j]);
+    swap(&a[l],&a[j]);
     return j;
 }
 //This is recursive Quick sort.
@@ -179,7 +180,7 @@ void Margesort(int a[],int l,int h)
         Marge(a,l,mid,h);
     }
 }
-//This index base Count sort function .This is faster sort .
+//This index base Count sort function .This is faster sort technique.
 void Countsort(int a[],int n)
 {
     int i,j,max;
